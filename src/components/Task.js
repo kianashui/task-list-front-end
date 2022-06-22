@@ -7,7 +7,7 @@ const Task = (props) => {
   // const [complete, setComplete] = useState(props.isComplete);
   const buttonClass = props.isComplete ? 'tasks__item__toggle--completed' : '';
   const toggleComplete = () => {
-    props.toggleCompleteCallback(props.id);
+    props.onClickCallback(props.id);
   };
 
   const deleteTask = () => {
@@ -32,7 +32,7 @@ Task.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   isComplete: PropTypes.bool.isRequired,
-  toggleCompleteCallback: PropTypes.func.isRequired,
+  onClickCallback: PropTypes.func.isRequired,
   deleteTaskCallback: PropTypes.func.isRequired,
 };
 
